@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Data</title>
+</head>
+<br>
+    <form action="/" method="POST">
+        <input type="submit" value="Click to insert the data">
+    </form> </br>
+
+    <% if(data.length>0) { %>
+        <table border="1" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>
+                        S.No
+                    </th>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        City
+                    </th>
+                    <th>
+                        State
+                    </th>
+                    <th>
+                        Zipcode
+                    </th>
+                    <th>
+                        Country
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < data.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i %>
+                        </td>
+                        <td>
+                            <%= data[i].firstname %>
+                        </td>
+                        <td>
+                            <%= data[i].lastname %>
+                        </td>
+                        <td>
+                            <%= data[i].phonenumber %>
+                        </td>
+                        <td>
+                            <%= data[i].city %>
+                        </td>
+                        <td>
+                            <%= data[i].state %>
+                        </td>
+                        <td>
+                            <%= data[i].zipcode %>
+                        </td>
+                        <td>
+                            <%= data[i].country %>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    <% } %>    
+</body>
+</html>
